@@ -1,0 +1,10 @@
+{
+    "development": {
+        "apiUrl": "https://udaya-blog.herokuapp.com",
+        "contentApiKey": "d95a3f46e96c3b69587d338408"
+    },
+    "production": {
+        "apiUrl": "https://udaya-blog.herokuapp.com",
+        "contentApiKey": "d95a3f46e96c3b69587d338408"
+    }
+}

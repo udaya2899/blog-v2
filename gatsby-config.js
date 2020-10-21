@@ -46,6 +46,14 @@ try {
 
 module.exports = {
     plugins: [
+        {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                trackingId: "UA-180979375-1",
+                // Defines where to place the tracking script - `true` in the head and `false` in the body
+                head: true,
+            }
+        },
         `gatsby-plugin-preact`,
         `gatsby-plugin-netlify`,
         {
@@ -99,6 +107,6 @@ module.exports = {
         },
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // This plugin is currently causing issues: https://github.com/gatsbyjs/gatsby/issues/25360
-        //`gatsby-plugin-offline`,
+        `gatsby-plugin-offline`,
     ],
 }

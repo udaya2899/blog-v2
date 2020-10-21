@@ -1,30 +1,17 @@
 module.exports = {
-    // Do not include a trailing slash!
-    siteUrl: `https://demo.jamify.org`,
+    siteUrl: `https://blog.udaya.me`, // Site domain. Do not include a trailing slash!
 
-    // Enable infinite scroll (default: true)
     infiniteScroll: true,
+    postsPerPage: 12, // Number of posts shown on paginated pages (changes this requires sometimes to delete the cache)
 
-    // Initial number fetched, scrolling lazy loads posts one by one
-    // If infinite scroll is disabled: maximum number of post shown per page
-    postsPerPage: 3,
+    siteTitleMeta: `Blog`, // This allows an alternative site title for meta data for pages.
+    siteDescriptionMeta: `Golang and React Blog by a Developer`, // This allows an alternative site description for meta data for pages.
 
-    // This allows an alternative site title for meta data for pages.
-    siteTitleMeta: `Gatsby Starter Ghost CMS`,
+    shareImageWidth: 1000, // Change to the width of your default share image
+    shareImageHeight: 523, // Change to the height of your default share image
 
-    // This allows an site description for meta data for pages.
-    siteDescriptionMeta: `Turn your Ghost blog into a flaring fast static site with Gatsby`,
-
-    // Used for App and Offline manifest e.g. Mobile Home Screen
-    shortTitle: `Jamify`,
-    siteIcon: `favicon.png`,
-    backgroundColor: `#e9e9e9`,
-    themeColor: `#15171A`,
-
-    // Show more logs for debugging purposes (default: false)
-    verbose: false,
-
-    // Severity for verbose mode: (`info`, `warn`, `error`)
-    severity: `info`,
-
-}
+    shortTitle: `Blog`, // Used for App manifest e.g. Mobile Home Screen
+    siteIcon: `favicon.png`, // Logo in /static dir used for SEO, RSS, and App manifest
+    backgroundColor: `#e9e9e9`, // Used for Offline Manifest
+    themeColor: `#15171A`, // Used for Offline Manifest
+};
