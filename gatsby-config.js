@@ -86,6 +86,31 @@ module.exports = {
             },
         },
         {
+            resolve: `gatsby-plugin-sharp`,
+        },
+        {
+            resolve: `gatsby-transformer-rehype`,
+            options: {
+                filter: node => (
+                    // this is an example (any node type can be selected)
+                    node.internal.type === `GhostPost`
+                ),
+                plugins: [
+                    {
+                        resolve: `gatsby-rehype-inline-images`,
+                        // all options are optional and can be omitted
+                        options: {
+                            // all images larger are scaled down to maxWidth (default: maxWidth = imageWidth)
+                            // maxWidth: 2000,
+                            withWebp: true,
+                            // disable, if you need to save memory
+                            useImageCache: true,
+                        }
+                    },
+                ],
+            },
+        },
+        {
             resolve: `gatsby-theme-ghost-members`,
         },
         {
