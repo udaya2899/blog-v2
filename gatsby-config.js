@@ -112,9 +112,9 @@ module.exports = {
                 ],
             },
         },
-        // {
-        //     resolve: `gatsby-theme-ghost-members`,
-        // },
+        {
+            resolve: `gatsby-theme-ghost-members`,
+        },
         {
             resolve: `gatsby-transformer-rehype`,
             options: {
