@@ -24,6 +24,19 @@ index 0fd89c1..f878a08 100644
                          </div>
                      </form>
                  </div>
+diff --git a/node_modules/gatsby-theme-ghost-members/src/gatsby-theme-try-ghost/components/common/effects/OverlayContainer.js b/node_modules/gatsby-theme-ghost-members/src/gatsby-theme-try-ghost/components/common/effects/OverlayContainer.js
+index 4a04cf8..1f32561 100644
+--- a/node_modules/gatsby-theme-ghost-members/src/gatsby-theme-try-ghost/components/common/effects/OverlayContainer.js
++++ b/node_modules/gatsby-theme-ghost-members/src/gatsby-theme-try-ghost/components/common/effects/OverlayContainer.js
+@@ -40,7 +40,7 @@ class OverlayContainer extends React.Component {
+         const settings = this.props.data.allGhostSettings.edges[0].node
+ 
+         const cmsUrl = settings.url
+-        const postURL = `${cmsUrl}/members/api/send-magic-link/`
++        const postURL = `${cmsUrl}/ghost/api/canary/members/send-magic-link`
+ 
+         const values = {
+             email: this.state.value,
 diff --git a/node_modules/gatsby-theme-ghost-members/src/utils/lang.js b/node_modules/gatsby-theme-ghost-members/src/utils/lang.js
 index ef1565a..40efcbf 100644
 --- a/node_modules/gatsby-theme-ghost-members/src/utils/lang.js
