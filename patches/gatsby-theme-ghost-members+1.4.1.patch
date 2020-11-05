@@ -1,0 +1,26 @@
+diff --git a/node_modules/gatsby-theme-ghost-members/src/components/common/Subscribe.js b/node_modules/gatsby-theme-ghost-members/src/components/common/Subscribe.js
+index 887f661..b9592ec 100644
+--- a/node_modules/gatsby-theme-ghost-members/src/components/common/Subscribe.js
++++ b/node_modules/gatsby-theme-ghost-members/src/components/common/Subscribe.js
+@@ -9,7 +9,7 @@ import { SubscribeForm } from '.'
+ // The actual component
+ const Subscribe = ({ data }) => {
+     const site = data.ghostSettings
+-    const cmsUrl = site.url
++    const cmsUrl = `https://udaya-blog.herokuapp.com`
+ 
+     const text = get(useLang())
+     const title = text(`SITE_TITLE`, site.title)
+diff --git a/node_modules/gatsby-theme-ghost-members/src/components/common/SubscribeForm.js b/node_modules/gatsby-theme-ghost-members/src/components/common/SubscribeForm.js
+index ecfee44..835354e 100644
+--- a/node_modules/gatsby-theme-ghost-members/src/components/common/SubscribeForm.js
++++ b/node_modules/gatsby-theme-ghost-members/src/components/common/SubscribeForm.js
+@@ -31,7 +31,7 @@ class SubscribeForm extends React.Component {
+     handleSubmit(event) {
+         event.preventDefault()
+ 
+-        const cmsUrl = this.props.url
++        const cmsUrl = `https://udaya-blog.herokuapp.com`
+         const postURL = `${cmsUrl}/members/api/send-magic-link/`
+ 
+         const values = {
