@@ -7,9 +7,3 @@
 
 [[plugins]]
   package = "netlify-plugin-gatsby-cache"
-
-[[redirects]]
-  from = "/members/api/send-magic-link/"
-  to = "https://udaya-blog.herokuapp.com/members/api/send-magic-link/"
-  status = 200
-  force = true # COMMENT: ensure that we always redirect
