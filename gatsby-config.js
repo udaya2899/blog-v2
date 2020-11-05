@@ -1,30 +1,30 @@
-const path = require(`path`)
+const path = require(`path`);
 
-let siteConfig
-let ghostConfig
-let mediaConfig
-let routesConfig
+let siteConfig;
+let ghostConfig;
+let mediaConfig;
+let routesConfig;
 
 try {
-    siteConfig = require(`./siteConfig`)
+    siteConfig = require(`./siteConfig`);
 } catch (e) {
-    siteConfig = null
+    siteConfig = null;
 }
 
 try {
-    mediaConfig = require(`./mediaConfig`)
+    mediaConfig = require(`./mediaConfig`);
 } catch (e) {
-    mediaConfig = null
+    mediaConfig = null;
 }
 
 try {
-    routesConfig = require(`./routesConfig`)
+    routesConfig = require(`./routesConfig`);
 } catch (e) {
-    routesConfig = null
+    routesConfig = null;
 }
 
 try {
-    ghostConfig = require(`./.ghost`)
+    ghostConfig = require(`./.ghost`);
 } catch (e) {
     ghostConfig = {
         development: {
@@ -35,12 +35,15 @@ try {
             apiUrl: process.env.GHOST_API_URL,
             contentApiKey: process.env.GHOST_CONTENT_API_KEY,
         },
-    }
+    };
 } finally {
-    const { apiUrl, contentApiKey } = process.env.NODE_ENV === `development` ? ghostConfig.development : ghostConfig.production
+    const { apiUrl, contentApiKey } =
+        process.env.NODE_ENV === `development`
+            ? ghostConfig.development
+            : ghostConfig.production;
 
     if (!apiUrl || !contentApiKey || contentApiKey.match(/<key>/)) {
-        ghostConfig = null //allow default config to take over
+        ghostConfig = null; //allow default config to take over
     }
 }
 
@@ -49,10 +52,10 @@ module.exports = {
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
-                trackingId: "UA-180979375-1",
+                trackingId: `UA-180979375-1`,
                 // Defines where to place the tracking script - `true` in the head and `false` in the body
                 head: true,
-            }
+            },
         },
         `gatsby-plugin-preact`,
         `gatsby-plugin-netlify`,
@@ -91,10 +94,9 @@ module.exports = {
         {
             resolve: `gatsby-transformer-rehype`,
             options: {
-                filter: node => (
+                filter: (node) =>
                     // this is an example (any node type can be selected)
-                    node.internal.type === `GhostPost`
-                ),
+                    node.internal.type === `GhostPost`,
                 plugins: [
                     {
                         resolve: `gatsby-rehype-inline-images`,
@@ -105,7 +107,7 @@ module.exports = {
                             withWebp: true,
                             // disable, if you need to save memory
                             useImageCache: true,
-                        }
+                        },
                     },
                 ],
             },
@@ -116,10 +118,9 @@ module.exports = {
         {
             resolve: `gatsby-transformer-rehype`,
             options: {
-                filter: node => (
+                filter: (node) =>
                     node.internal.type === `GhostPost` ||
-                    node.internal.type === `GhostPage`
-                ),
+                    node.internal.type === `GhostPage`,
                 plugins: [
                     {
                         resolve: `gatsby-rehype-ghost-links`,
@@ -134,4 +135,4 @@ module.exports = {
         // This plugin is currently causing issues: https://github.com/gatsbyjs/gatsby/issues/25360
         `gatsby-plugin-offline`,
     ],
-}
+};
