@@ -15,7 +15,6 @@
     "build": "gatsby build --log-pages",
     "clean": "gatsby clean",
     "config": "git update-index --skip-worktree .ghost.json",
-    "postinstall": "npx patch-package" ,
     "deploy": "gatsby build && echo 'demo.jamify.org' > public/CNAME && gh-pages -f -d public -b master -r git@github.com:styxlab/styxlab.github.io"
   },
   "dependencies": {
