@@ -11,19 +11,6 @@ index ecfee44..598e279 100644
  
          const values = {
              email: this.state.value,
-diff --git a/node_modules/gatsby-theme-ghost-members/src/components/common/SubscribeOverlay.js b/node_modules/gatsby-theme-ghost-members/src/components/common/SubscribeOverlay.js
-index 0fd89c1..f878a08 100644
---- a/node_modules/gatsby-theme-ghost-members/src/components/common/SubscribeOverlay.js
-+++ b/node_modules/gatsby-theme-ghost-members/src/components/common/SubscribeOverlay.js
-@@ -53,7 +53,7 @@ const SubscribeOverlay = ({ data, overlay }) => {
-                             <strong>{`${text(`GREAT`)}!`}</strong> {text(`CHECK_YOUR_INBOX`)}.
-                         </div>
-                         <div className="message-error">
--                            {text(`ENTER_VALID_EMAIL`)}!
-+                            {text(`SOMETHING_WENT_WRONG`)}!
-                         </div>
-                     </form>
-                 </div>
 diff --git a/node_modules/gatsby-theme-ghost-members/src/gatsby-theme-try-ghost/components/common/effects/OverlayContainer.js b/node_modules/gatsby-theme-ghost-members/src/gatsby-theme-try-ghost/components/common/effects/OverlayContainer.js
 index 4a04cf8..1f32561 100644
 --- a/node_modules/gatsby-theme-ghost-members/src/gatsby-theme-try-ghost/components/common/effects/OverlayContainer.js
@@ -37,15 +24,3 @@ index 4a04cf8..1f32561 100644
  
          const values = {
              email: this.state.value,
-diff --git a/node_modules/gatsby-theme-ghost-members/src/utils/lang.js b/node_modules/gatsby-theme-ghost-members/src/utils/lang.js
-index ef1565a..40efcbf 100644
---- a/node_modules/gatsby-theme-ghost-members/src/utils/lang.js
-+++ b/node_modules/gatsby-theme-ghost-members/src/utils/lang.js
-@@ -3,6 +3,7 @@ const lang = {
-         CHECK_YOUR_INBOX: `Check your inbox and click the link to confirm your subscription`,
-         EMAIL: `Email`,
-         ENTER_VALID_EMAIL: `Please enter a valid email address`,
-+        SOMETHING_WENT_WRONG: `Uh.. Oh.. Something went wrong`,
-         GREAT: `Great`,
-         SUBSCRIBE: `Subscribe`,
-         SUBSCRIBE_OVERLAY: `Stay up to date! Get all the latest & greatest posts delivered straight to your inbox`,
